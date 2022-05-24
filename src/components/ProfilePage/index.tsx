@@ -1,3 +1,4 @@
+import { Feed } from '../Feed';
 import {
   Container,
   Banner,
@@ -45,6 +46,8 @@ export function ProfilePage(): JSX.Element {
           </span>
         </Followage>
       </ProfileData>
+
+      <Feed />
     </Container>
   );
 }
