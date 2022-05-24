@@ -1,4 +1,15 @@
-import { Container, Header, BackIcon, ProfileInfo } from './styles';
+import { ProfilePage } from '../ProfilePage';
+import {
+  Container,
+  Header,
+  BackIcon,
+  ProfileInfo,
+  BellIcon,
+  BottomMenu,
+  EmailIcon,
+  HomeIcon,
+  SearchIcon,
+} from './styles';
 
 export function Main(): JSX.Element {
   return (
@@ -6,22 +17,22 @@ export function Main(): JSX.Element {
       <Header>
         <button type="button">
           <BackIcon />
-
-          <ProfileInfo>
-            <strong>Rennan Oliveira</strong>
-            <span>612 Tweets</span>
-          </ProfileInfo>
         </button>
+
+        <ProfileInfo>
+          <strong>Rennan Oliveira</strong>
+          <span>612 Tweets</span>
+        </ProfileInfo>
       </Header>
 
-      {/* <ProfilePage /> */}
+      <ProfilePage />
 
-      {/* <BottomMenu>
-        <HomeIcon />
+      <BottomMenu>
+        <HomeIcon active />
         <SearchIcon />
         <BellIcon />
         <EmailIcon />
-      </BottomMenu> */}
+      </BottomMenu>
     </Container>
   );
 }

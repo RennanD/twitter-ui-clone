@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import {
+  HiArrowLeft,
+  MdOutlineHome,
+  MdOutlineNotifications,
+  MdSearch,
+  MdOutlineMailOutline,
+} from '../../styles/icons';
+
+type IconProps = {
+  active?: boolean;
+};
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +24,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  z-index: 2;
   position: sticky;
   top: 0;
   background: var(--primary);
@@ -40,16 +52,79 @@ export const Header = styled.div`
   }
 `;
 
-export const BackIcon = styled.div``;
+export const BackIcon = styled(HiArrowLeft)`
+  width: 24px;
+  height: 24px;
 
-export const ProfileInfo = styled.div``;
+  fill: var(--twitter);
+`;
 
-// export const BottomMenu = styled.div``;
+export const ProfileInfo = styled.div`
+  margin-left: 17px;
+  display: flex;
+  flex-direction: column;
 
-// export const HomeIcon = styled.div``;
+  > strong {
+    font-size: 19px;
+  }
 
-// export const SearchIcon = styled.div``;
+  > span {
+    font-size: 15px;
+    color: var(--gray);
+  }
+`;
 
-// export const BellIcon = styled.div``;
+export const BottomMenu = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 
-// export const EmailIcon = styled.div``;
+  background-color: var(--primary);
+  width: 100%;
+  border-top: 1px solid var(--outline);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px min(46px, max(10vw, 10px));
+
+  @media (min-width: 500px) {
+    display: none;
+  }
+`;
+
+const iconsCss = css<IconProps>`
+  width: 31px;
+  height: 31px;
+
+  cursor: pointer;
+
+  fill: var(--gray);
+
+  ${({ active }) =>
+    active &&
+    css`
+      fill: var(--twitter);
+    `}
+
+  &:hover {
+    fill: var(--twitter);
+  }
+`;
+
+export const HomeIcon = styled(MdOutlineHome)`
+  ${iconsCss};
+`;
+
+export const SearchIcon = styled(MdSearch)`
+  ${iconsCss};
+`;
+
+export const BellIcon = styled(MdOutlineNotifications)`
+  ${iconsCss};
+`;
+
+export const EmailIcon = styled(MdOutlineMailOutline)`
+  ${iconsCss};
+`;
