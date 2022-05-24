@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { MdOutlineLocationOn, MdCake } from '../../styles/icons';
+import { MdOutlineCalendarToday } from '../../styles/icons';
 import { Button } from '../Button';
 
 export const Container = styled.div`
@@ -93,13 +93,13 @@ const iconCss = css`
   color: var(--gray);
 `;
 
-export const LocationIcon = styled(MdOutlineLocationOn)`
+export const CalendarIcon = styled(MdOutlineCalendarToday)`
   ${iconCss}
 `;
 
-export const CakeIcon = styled(MdCake)`
-  ${iconCss}
-`;
+// export const CakeIcon = styled(MdCake)`
+//   ${iconCss}
+// `;
 
 export const Followage = styled.div`
   display: flex;

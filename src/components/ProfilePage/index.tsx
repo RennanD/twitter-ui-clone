@@ -4,10 +4,9 @@ import {
   Banner,
   Avatar,
   ProfileData,
-  LocationIcon,
-  CakeIcon,
   Followage,
   EditButton,
+  CalendarIcon,
 } from './styles';
 
 export function ProfilePage(): JSX.Element {
@@ -29,12 +28,8 @@ export function ProfilePage(): JSX.Element {
         </p>
         <ul>
           <li>
-            <LocationIcon />
-            Teresina - PI
-          </li>
-          <li>
-            <CakeIcon />
-            Nascido(a) em 03 de outubro de 1996
+            <CalendarIcon />
+            Ingressou em agosto de 2021
           </li>
         </ul>
         <Followage>

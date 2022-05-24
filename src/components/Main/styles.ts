@@ -27,7 +27,8 @@ export const Header = styled.div`
   z-index: 2;
   position: sticky;
   top: 0;
-  background: var(--primary);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
 
   display: flex;
   align-items: center;

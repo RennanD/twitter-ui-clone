@@ -3,6 +3,7 @@ export {
   MdOutlineNotifications,
   MdOutlineMailOutline,
   MdOutlineFavoriteBorder,
+  MdOutlineCalendarToday,
   MdOutlineExitToApp,
   MdOutlineLocationOn,
   MdSearch,

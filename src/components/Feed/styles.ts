@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
   flex: flex;
   flex-direction: column;
+
+  padding-bottom: min(56px, max(12vw, 12px));
 `;
 
 export const Tab = styled.div`
