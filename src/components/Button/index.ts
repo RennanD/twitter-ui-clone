@@ -5,6 +5,9 @@ type ButtonProps = {
 };
 
 export const Button = styled.div<ButtonProps>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--twitter);
 
   color: var(--white);
@@ -18,7 +21,7 @@ export const Button = styled.div<ButtonProps>`
   outline: 0;
 
   &:hover {
-    background-color: var(--twitter-light);
+    background-color: var(--twitter-light-hover);
   }
 
   ${({ outline }) =>
