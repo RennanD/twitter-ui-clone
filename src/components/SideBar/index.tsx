@@ -31,12 +31,33 @@ export function SideBar(): JSX.Element {
                 name="Rodrigo Gonçalvez"
                 nickname="@rodrigorgtic"
               />,
+              <FollowsSuggestion name="João Inácio" nickname="@birobirobiro" />,
             ]}
           />
 
           <List
             title="O que está acontecendo"
             elements={[
+              <News
+                title="Assuntos do momento no Brasil"
+                description="Clone do Twitter"
+              />,
+
+              <News
+                title="Assuntos do momento no Brasil"
+                description="Clone do Twitter"
+              />,
+
+              <News
+                title="Assuntos do momento no Brasil"
+                description="Clone do Twitter"
+              />,
+
+              <News
+                title="Assuntos do momento no Brasil"
+                description="Clone do Twitter"
+              />,
+
               <News
                 title="Assuntos do momento no Brasil"
                 description="Clone do Twitter"
