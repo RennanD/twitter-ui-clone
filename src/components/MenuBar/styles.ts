@@ -6,6 +6,7 @@ import {
   MdOutlineMailOutline,
   MdPerson,
   MdOutlineFavoriteBorder,
+  MdOutlineExitToApp,
 } from '../../styles/icons';
 import { Button } from '../Button';
 import { RocketseatIcon } from '../RocketseatIcon';
@@ -80,12 +81,6 @@ export const MenuButton = styled.button<MenuButtonProps>`
 
   &:hover {
     background-color: var(--twitter-dark-hover);
-
-    > span,
-    svg {
-      color: var(--twitter);
-      fill: var(--twitter);
-    }
   }
 
   ${({ selected }) =>
@@ -95,6 +90,10 @@ export const MenuButton = styled.button<MenuButtonProps>`
       svg {
         color: var(--twitter);
         fill: var(--twitter);
+      }
+
+      span {
+        font-weight: bold;
       }
     `}
 
@@ -107,7 +106,6 @@ export const MenuButton = styled.button<MenuButtonProps>`
     > span {
       display: inline;
       margin-left: 19px;
-      font-weight: bold;
       font-size: 19px;
     }
 
@@ -159,4 +157,59 @@ export const FavoriteIcon = styled(MdOutlineFavoriteBorder)`
 
 export const ProfileIcon = styled(MdPerson)`
   ${iconsCss};
+`;
+
+export const BottomSide = styled.div`
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8.25px 15px;
+
+  transition: all 0.2s ease;
+  border-radius: 25px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--twitter-dark-hover);
+  }
+`;
+
+export const Avatar = styled.div`
+  height: 39px;
+  width: 39px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: var(--gray);
+`;
+
+export const ProfileData = styled.div`
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10px;
+    font-size: 14px;
+
+    > span {
+      color: var(--gray);
+    }
+  }
+`;
+
+export const ExitButton = styled(MdOutlineExitToApp)`
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+
+    color: var(--white);
+    margin-left: 30px;
+  }
 `;

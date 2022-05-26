@@ -9,6 +9,10 @@ import {
   FavoriteIcon,
   ProfileIcon,
   TweetButton,
+  BottomSide,
+  Avatar,
+  ProfileData,
+  ExitButton,
 } from './styles';
 
 export function MenuBar(): JSX.Element {
@@ -46,6 +50,16 @@ export function MenuBar(): JSX.Element {
           <span>Tweetar</span>
         </TweetButton>
       </TopSide>
+
+      <BottomSide>
+        <Avatar />
+
+        <ProfileData>
+          <strong>Rennan Oliveira</strong>
+          <span>@rennand</span>
+        </ProfileData>
+        <ExitButton />
+      </BottomSide>
     </Container>
   );
 }
