@@ -11,14 +11,17 @@ export const Item = styled.div`
   padding: 10px 16px;
 
   transition: all 0.2s ease;
-  cursor: pointer;
 
-  &:hover {
-    /* opacity: 0.8; */
-    background-color: var(--twitter-dark-hover);
+  & + div {
+    cursor: pointer;
 
-    > button {
-      opacity: 0.8;
+    &:hover {
+      /* opacity: 0.8; */
+      background-color: var(--twitter-dark-hover);
+
+      > button {
+        opacity: 0.8;
+      }
     }
   }
 
